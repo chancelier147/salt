@@ -1,8 +1,5 @@
-shells:
-  pkg.installed:
-    - pkgs:
-      - zsh
-
+zsh:
+  pkg.installed: []
 
 eboli:
   user.present:
@@ -12,10 +9,8 @@ eboli:
       - wheel
     - home: /home/eboli
     - require:
-      - pkg:
-        - zsh
+      - pkg: zsh
   ssh_auth.present:
     - user: eboli
     - source: salt://base_users/ssh_keys/eboli.pub
     - config: '%h/.ssh/authorized_keys'
-      
