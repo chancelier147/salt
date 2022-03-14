@@ -16,6 +16,6 @@ eboli:
         - zsh
   ssh_auth.present:
     - user: eboli
-    - source: salt://base_users/ssh_keys/mo_ali.pub
+    - source: salt://base_users/ssh_keys/eboli.pub
     - config: '%h/.ssh/authorized_keys'
       
